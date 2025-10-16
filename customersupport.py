@@ -1,15 +1,22 @@
-
 import streamlit as st
 from textblob import TextBlob
 import random
 
-# Simple Knowledge Base
+# Simple Knowledge Base enhanced with Deriv-specific information
 knowledge_base = {
     "hello": "Hi there! How can I assist you today?",
     "hi": "Hello! How can I help you?",
     "how are you": "I am a bot, so I don't have feelings, but I'm ready to help you!",
-    "what is deriv": "Deriv is an online trading platform offering various financial instruments like CFDs, options, and multipliers.",
-    "trading": "Deriv offers CFD trading, options, and multipliers. You can learn more on their official website.",
+    "what is deriv": "Deriv is at the cutting edge of financial technology, revolutionizing CFD trading through AI. Their goal is to automate and optimize all aspects of operations, delivering unparalleled performance, innovation, and scalability.",
+    "deriv's goal": "Deriv's goal is to automate and optimize all aspects of operations, delivering unparalleled performance, innovation, and scalability through AI.",
+    "ai at deriv": "At Deriv, AI is used to design and implement advanced AI solutions, integrating them across all operational facets, from trading algorithms to customer experience.",
+    "ai engineer role": "As an AI Engineer at Deriv, you would design and implement advanced AI solutions, integrate them across operations, develop deep learning models, NLP applications, vector search systems, agentic systems, and MLOps integration.",
+    "trading": "Deriv offers CFD trading, options, and multipliers. Their AI solutions also focus on automated trading strategies and decision-making systems.",
+    "nlp": "Deriv uses NLP for sentiment analysis, document processing, and customer interaction enhancements, utilizing tools like spaCy, Hugging Face Transformers, and OpenAI APIs.",
+    "mlops": "Deriv integrates MLOps to deploy and maintain AI models at scale using tools such as MLflow, Kubeflow, TensorFlow Serving, and Seldon for seamless production workflows.",
+    "vector search": "Deriv builds systems utilizing vector databases like Weaviate, Pinecone, and Milvus to enable real-time, context-aware data retrieval.",
+    "generative ai": "Deriv explores and integrates generative technologies, including GPT, DALL-E, and GANs, for innovative applications in user experience and content generation.",
+    "transformers": "Deriv utilizes advanced transformer models like BERT, T5, and ViT to solve complex problems in NLP and computer vision.",
     "account": "For account-related issues, please visit the 'Help' section on Deriv's website or contact their official support.",
     "thank you": "You're welcome! Is there anything else I can help you with?",
     "bye": "Goodbye! Have a great day!",
@@ -71,4 +78,5 @@ if prompt := st.chat_input("Ask me anything about Deriv..."):
         st.markdown(response)
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
+
 
